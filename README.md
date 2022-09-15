@@ -1,4 +1,4 @@
-# WaytoWorkers
+# WayToWorkers
 
 Website : https://waytoworkers.carrd.co/
 
