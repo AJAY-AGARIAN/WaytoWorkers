@@ -12,9 +12,13 @@ User can hire
 8. Hairdresser
 9. And others
 
-Users have the feature to limit the workers only in their cities or view all available workers.
-
-They can view workers' details and book them for a particular date. The app provides the opportunity to directly call the workers also.
+Users have the following features:
+A. Limit the workers only in their cities or view all available workers.
+B. They can view workers' details and book them for a particular date. 
+C. The app provides the opportunity to directly call the workers also.
+D. Post photos of work done by workers in the feeds.
 
 Users and workers use the same app, which means the same app has 2 modes, one for regular users and one for those workers. 
 Workers will fill in their details while registering and can set their availability in the app, which will be public and visible to all users. 
+
+Project completed by DEC 2019.
