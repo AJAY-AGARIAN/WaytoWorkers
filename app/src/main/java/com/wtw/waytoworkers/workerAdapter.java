@@ -21,7 +21,7 @@ public class workerAdapter extends RecyclerView.Adapter<workerAdapter.workerView
         private OnNoteListner mOnnotelistener;
         private Rating rating;
         private float stars;
-    public workerAdapter(Context mCtx, List<Worker> workerList,OnNoteListner onNoteListner) {
+        public workerAdapter(Context mCtx, List<Worker> workerList,OnNoteListner onNoteListner) {
                 this.mCtx = mCtx;
                 this.workerList = workerList;
                 this.mOnnotelistener=onNoteListner;
@@ -34,27 +34,27 @@ public class workerAdapter extends RecyclerView.Adapter<workerAdapter.workerView
                 return new workerViewHolder(view,mOnnotelistener);
                 }
 
-    @Override
-    public void onBindViewHolder(@NonNull workerViewHolder holder, int position) {
+        @Override
+        public void onBindViewHolder(@NonNull workerViewHolder holder, int position) {
 
-        Worker worker=workerList.get(position);
-        holder.workerName.setText("Name: " + worker.workername);
-        holder.workerAddress.setText("Address: " + worker.workeraddress);
-        holder.workerrate.setText("INR/hour: " + worker.workerrate);
-        holder.ratingBar.setRating(worker.getWorkerrating());
-        //LINK
-        String driveLink=worker.workerimageurl;
-        if (driveLink.length()!=0 && driveLink.length()>=65) {
-            String substr = " ";
-            substr = driveLink.substring(32, 65);
-            String loadUrl = "https://docs.google.com/uc?id=" + substr;
-            Glide.with(holder.itemView.getContext()).load(loadUrl).circleCrop().into(holder.workerimage);
+            Worker worker=workerList.get(position);
+            holder.workerName.setText("Name: " + worker.workername);
+            holder.workerAddress.setText("Address: " + worker.workeraddress);
+            holder.workerrate.setText("INR/hour: " + worker.workerrate);
+            holder.ratingBar.setRating(worker.getWorkerrating());
+            //LINK
+            String driveLink=worker.workerimageurl;
+            if (driveLink.length()!=0 && driveLink.length()>=65) {
+                String substr = " ";
+                substr = driveLink.substring(32, 65);
+                String loadUrl = "https://docs.google.com/uc?id=" + substr;
+                Glide.with(holder.itemView.getContext()).load(loadUrl).circleCrop().into(holder.workerimage);
+            }
+            else
+            {
+                holder.workerimage.setImageResource(R.drawable.nodp);
+            }
         }
-        else
-        {
-            holder.workerimage.setImageResource(R.drawable.nodp);
-        }
-    }
 
         @Override
         public int getItemCount() {

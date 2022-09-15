@@ -127,6 +127,7 @@ public class workerdetailandbook extends Activity {
                 date=day+"|"+month+"|"+year;
             }
         });
+
         if (status.getText().equals("AVAILABLE"))
         {
             status.setTextColor(getResources().getColor(R.color.colorPrimary));

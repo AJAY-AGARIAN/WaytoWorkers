@@ -49,12 +49,7 @@ public class phoneVerification extends AppCompatActivity {
 
         otpProgress.setVisibility(View.GONE);
         verifyProgress.setVisibility(View.GONE);
-        getOtp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getVerificationCode();
-            }
-        });
+        getOtp.setOnClickListener(v -> getVerificationCode());
 
         verifyOtp.setOnClickListener(new View.OnClickListener() {
             @Override

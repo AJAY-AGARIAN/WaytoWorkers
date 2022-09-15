@@ -42,9 +42,9 @@ public class signupOrSignin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (flag==0){
-                startActivity(new Intent(signupOrSignin.this,phoneVerification.class));
+                startActivity(new Intent(signupOrSignin.this,usersingup.class));
                 }else if(flag==1){
-                    startActivity(new Intent(signupOrSignin.this,phoneVerification.class));
+                    startActivity(new Intent(signupOrSignin.this,workersignup.class));
                 }
             }
         });
